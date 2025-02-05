@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'poppins',sans-serif;
+
+  }
+  
+  body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+    background:  rgb(125, 106, 106);
+  }
+  
+  .app-container {
+    width: 90%;
+    max-width: 470px;
+    background:rgba(224, 213, 213, 0.75);
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #010000;
+    margin-bottom: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #010000;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  }
+  
+  input {
+    padding: 10px 35px;
+    width: 300px;
+    font-size: 18px;
+    border:40px;
+    border-radius: 30px;
+    height: 60px;
+    margin-right: 16px;
+    flex: 1;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #d0d4dc;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+  }
+  button img{
+    width:16px;
+
+  }
+  
+  button:hover {
+    background-color:  #0ff6ee;
+
+  }
+  .weather-icon{
+    width: 140px;
+    margin-top: -20px;
+  }
+  
+  .weather-info h2{
+      font-size: 35px;
+      font-weight: 500;
+      margin-top: -30px;
+      color: rgb(3, 2, 2);
+      font-family:'poppins',sans-serif ;
+  }
+  .weather-info h3{
+    font-size: 45px;
+    font-weight: 400;
+    padding: 40px;
+    margin-top: -35px;
+    color: rgb(3, 2, 2);
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.weather-summary {
+  margin-top: -35px;
+  padding: 30px;
+}
+.weather-summary h4{
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+}
+.weather-summary p {
+  margin: 5px;
+  font-size: 1.2em; 
+}
+.details{
+  display: flex;
+  align-items:center;
+  padding: 0 20px;
+  justify-content: space-between;
+  margin-top: 50px;
+
+}
+.col{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: rgb(3, 2, 2);
+  font-family: 'Times New Roman', Times, serif;
+}
+.col img{
+  width:30px;
+  margin-right: 10px;
+  margin-top: -55px;
+}
+.humidity,.wind{
+  font-size: 28px;
+  margin-top: -55px;
+  color: rgb(3, 2, 2);
+  font-family: 'Times New Roman', Times, serif;
+}
+.weather-info {
+    margin-top: 30px;
+}
+  
+
+#forecast {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f4faff; 
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#forecast h6 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #0a0707;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#forecast .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  gap: 10px;
+}
+
+
+#forecast .day-box {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#forecast .day-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#forecast .day-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+#forecast .day-box h4 {
+  font-size: 1 rem;
+  margin-bottom: 8px;
+  color: #00796b;
+  font-weight: bold;
+}
+
+#forecast .day-box p {
+  font-size: .5 rem;
+  margin: 5px 0;
+  color: #555555;
+}
+
+#forecast .day-box .day-temp {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3a2f15;
+}
+
+#forecast .day-box .day-condition {
+  font-style: italic;
+  color: #0288d1;
+}
+@media (max-width: 768px) {
+  #forecast {
+    padding: 15px;
+  }
+
+  #forecast h2 {
+    font-size: 1.5rem;
+  }
+
+  #forecast .day-box {
+    padding: 10px;
+  }
+
+  #forecast .day-box h4 {
+    font-size: 1rem;
+  }
+
+  #forecast .day-box p {
+    font-size: 0.9rem;
+  }
+}
+  
+#error-message {
+  display: none; 
+  position: absolute; 
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: #ff5252; 
+  color: #fff; 
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: center;
+  max-width: 90%;
+}
+
+  

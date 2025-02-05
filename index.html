@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Weather App</h1>
+    
+    <div class="search-container">
+      <input type="text" id="city" placeholder="Enter City Name" />
+      <button id="search-btn"><img src="images/search.png"></button>
+    </div>
+    <div id="error-message" class="error-message"></div>
+
+    <div id="current-weather" class="weather-info">
+      <img src="images/default.png" class="weather-icon" alt="weather-icon">
+      
+      <h3 class="city">Kochi</h3>
+      <h2 class="temp">29°C</h2>
+      <div id="weather-summary" class="weather-summary">
+        <h4></h4>
+        <p id="summary-text">sunny </p>
+      </div>
+      
+      <div class="details">
+        <div class="col">
+          <img src="images/humidity.png">
+          <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <img src="images/wind.png">
+          <div>
+            <p class="wind">15km/h</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div id="forecast" class="forecast">
+      <h6>3-Day Forecast</h6>
+      <div class="box-container">
+        <div class="day-box">
+          <img src="images/sunny.png" alt="Clear">
+          <h4>Jan 30</h4>
+          <p>Temp: <span class="day-temp">30°C</span></p>
+          <p>Cond:<span class="day-condition">Sunny</span></p>
+        </div>
+        <div class="day-box">
+          <img src="images/cloudy.png" alt="Clouds">
+          <h4>Jan 31</h4>
+          <p>Temp: <span class="day-temp">29°C</span></p>
+          <p>Cond:<span class="day-condition">Cloudy</span></p>
+        </div>
+        <div class="day-box">
+          <img src="images/rain.png" alt="Rain">
+          <h4>Feb 1</h4>
+          <p>Temp: <span class="day-temp">28°C</span></p>
+          <p>Cond: <span class="day-condition">Rainy</span></p>
+        </div>
+      </div>
+    </div>
+</body>
+
+  <script src="script.js"></script>
+</body>
+</html>
